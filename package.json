@@ -1,6 +1,6 @@
 {
   "name": "frond-template-zero",
-  "version": "21.2.3",
+  "version": "21.2.4",
   "description": "",
   "main": "app/index.js",
   "author": "",
@@ -13,11 +13,14 @@
     "url": "https://github.com/frondjs/frond/issues"
   },
   "homepage": "https://github.com/frondjs/frond#readme",
+  "config": {
+    "calver_format": "YY.MM.MICRO"
+  },
   "keywords": [
     "frondjs"
   ],
   "scripts": {
-    "dev": "frond-dev-server start --publicpath build --watch true",
+    "dev": "export NODE_PATH=$(npm root --quiet -g) && frond-dev-server start --publicpath build --watch true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pogen": "frond-dev-ops pogen",
     "pojson": "frond-dev-ops pojson",
@@ -26,7 +29,7 @@
     "cdist": "mkdir -p dist && frond-dev-ops cdist"
   },
   "dependencies": {
-    "@frondjs/frond": "^5.0.0"
+    "@frondjs/frond": "^5.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.13",
