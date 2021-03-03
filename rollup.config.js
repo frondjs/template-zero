@@ -1,4 +1,3 @@
-const {execSync} = require('child_process')
 const path = require('path')
 const fs = require('fs')
 const crypto = require('crypto')
@@ -46,6 +45,8 @@ module.exports = [
         intro: function() {
           let data = `window.${globalName}={};`
           data += `window.process={env:{NODE_ENV:"${env}"}};`
+          data += `window.${globalName}.version="${pkg.version}";`
+          data += `window.${globalName}.name="${pkg.name}";`
 
           const manifest = copyAssets()
           data += `window.${globalName}.assetManifest=${JSON.stringify(manifest)};`
