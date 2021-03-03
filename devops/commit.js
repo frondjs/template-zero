@@ -27,7 +27,7 @@ function genNextVersion(scheme, currentVersion, level) {
     case 'semver':
       return semver.inc(currentVersion, level)
     case 'calver':
-      const format = 'YY.MM.MICRO'
+      const format = 'yy.mm.micro.dev'
       return calver.inc(format, currentVersion, level)
     default:
       throw new Error('Unsupported versioning scheme.')
@@ -52,6 +52,8 @@ function commit(argv) {
   const nextVersion = genNextVersion('calver', currentVersion, level)
 
   updatePKGJson(nextVersion)
+
+  execSync("find . -name '*.tgz' -delete && npm pack", {stdio:'inherit', encoding: 'utf8'})
 
   const commitMessages = Array.isArray(message) ? message : [message]
   const commitMessagesCommand = '-m "' + commitMessages.join('" -m "') + '"'
