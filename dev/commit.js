@@ -27,7 +27,7 @@ function genNextVersion(scheme, currentVersion, level) {
     case 'semver':
       return semver.inc(currentVersion, level)
     case 'calver':
-      const format = pkgjson.config.calver_format || 'YY.MM.MICRO'
+      const format = 'YY.MM.MICRO'
       return calver.inc(format, currentVersion, level)
     default:
       throw new Error('Unsupported versioning scheme.')

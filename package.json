@@ -1,6 +1,6 @@
 {
   "name": "frond-template-zero",
-  "version": "21.2.4",
+  "version": "21.2.5",
   "description": "",
   "main": "app/index.js",
   "author": "",
@@ -13,9 +13,6 @@
     "url": "https://github.com/frondjs/frond/issues"
   },
   "homepage": "https://github.com/frondjs/frond#readme",
-  "config": {
-    "calver_format": "YY.MM.MICRO"
-  },
   "keywords": [
     "frondjs"
   ],
