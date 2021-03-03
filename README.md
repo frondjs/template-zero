@@ -1,2 +1,4 @@
 # FrondJS Template Zero
-Start developing your app from scratch with this template.
+Start developing from scratch.
+
+This is a skeleton project for frond apps.
