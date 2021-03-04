@@ -1,6 +1,6 @@
 {
   "name": "template-zero",
-  "version": "21.2.9",
+  "version": "21.2.10",
   "description": "",
   "main": "app/index.js",
   "author": "",
@@ -29,7 +29,7 @@
     "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
-    "@frondjs/dev-server": "^0.1.6",
+    "@frondjs/dev-server": "^0.1.7",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
